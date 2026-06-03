@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta Tags for Responsive Design -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Food Promotion Animation Design - Himali Jinadra">
+    
+    <title>Food Promotion - Himali Jinadra</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="food.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <!-- Logo -->
+            <a href="index.html" class="logo">Himali Jinadra</a>
+            
+            <!-- Hamburger Menu Button -->
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <!-- Navigation Links -->
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">Work</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Page Title -->
+        <h1 class="section-title">Food Promotion Animation Design</h1>
+
+        <!-- Project Box -->
+        <div class="project-box">
+            <!-- Project Overview -->
+            <h2>Project Overview</h2>
+            <p>
+                Food Promotion Animation is a visually engaging motion design project created in Figma. The animation showcases food products through smooth transitions, appealing visuals, and modern promotional layouts designed to capture user attention.
+            </p>
+
+            <!-- Role -->
+            <h2>Role</h2>
+            <p>UI/UX Designer & Motion Designer</p>
+
+            <!-- Tools Used -->
+            <h2>Tools Used</h2>
+            <p>Figma</p>
+
+            <!-- Project Goal -->
+            <h2>Project Goal</h2>
+            <p>
+                To create an eye-catching food promotion animation that enhances visual storytelling and improves user engagement through motion design.
+            </p>
+
+            <!-- Animation Screens -->
+            <h2>Animation Screens</h2>
+            <div class="gallery">
+                <img src="image/soup.jpg" alt="Food Promotion - Soup Animation">
+                <img src="image/french-fries.jpg" alt="Food Promotion - French Fries Animation">
+                <img src="image/dessert.jpg" alt="Food Promotion - Dessert Animation">
+                <img src="image/cold-coco.jpg" alt="Food Promotion - Cold Coco Animation">
+            </div>
+
+            <!-- Prototype Video -->
+            <h2>Prototype Video</h2>
+            <div class="video-box">
+                <video controls>
+                    <source src="video/food.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <!-- Design Highlights -->
+            <h2>Design Highlights</h2>
+            <ul>
+                <li>Smooth animated transitions</li>
+                <li>Modern promotional layouts</li>
+                <li>Strong visual hierarchy</li>
+                <li>Engaging food imagery</li>
+                <li>Interactive motion effects</li>
+                <li>Professional color schemes</li>
+                <li>Dynamic typography animations</li>
+            </ul>
+
+            <!-- Key Features -->
+            <h2>Key Features</h2>
+            <ul>
+                <li>High-quality food photography</li>
+                <li>Smooth and fluid animations</li>
+                <li>Modern promotional design patterns</li>
+                <li>Clear messaging and branding</li>
+                <li>Responsive layout considerations</li>
+                <li>Eye-catching visual effects</li>
+                <li>Professional presentation</li>
+            </ul>
+
+            <!-- Outcome -->
+            <h2>Outcome</h2>
+            <p>
+                The final animation delivers a vibrant and engaging promotional experience that effectively showcases food products while maintaining a modern and visually appealing design. The project successfully combines motion design principles with food marketing to create compelling content.
+            </p>
+
+            <!-- Design Process -->
+            <h2>Design Process</h2>
+            <ul>
+                <li>Concept Development & Brainstorming</li>
+                <li>Storyboarding & Layout Planning</li>
+                <li>Visual Design & Asset Creation</li>
+                <li>Animation & Motion Effects</li>
+                <li>Review & Refinement</li>
+                <li>Final Production & Export</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 Himali Jinadra. All rights reserved.</p>
+    </footer>
+
+    <!-- Mobile Menu Toggle Script -->
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+
+        // Toggle menu on hamburger click
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+
+        // Close menu when a link is clicked
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                hamburger.classList.remove('active');
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.nav-container')) {
+                navMenu.classList.remove('active');
+                hamburger.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>

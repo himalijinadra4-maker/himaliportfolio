@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta Tags for Responsive Design -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Himali Jinadra - UI/UX Designer Portfolio">
+    <meta name="theme-color" content="#0b2f5b">
+    
+    <title>Himali Jinadra Portfolio</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <!-- Logo -->
+            <a href="index.html" class="logo">Himali Jinadra</a>
+            
+            <!-- Hamburger Menu Button -->
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <!-- Navigation Links -->
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">Work</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Hi, I'm Himali Jinadra</h1>
+            <p class="hero-subtitle">UI/UX Designer & Computer Engineering Graduate</p>
+            
+            <div class="hero-buttons">
+                <a class="btn btn-primary" href="#projects">View Work</a>
+                <a class="btn btn-secondary" href="pdf/himali-resume.pdf" download>
+                    Download Resume
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects Section -->
+    <section class="container" id="projects">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="projects-grid">
+            <!-- Project Card 1: DineDistinct -->
+            <a href="dinedistinct.html" class="card">
+                <div class="card-image">
+                    <img src="image/dinedistinct-cover.png" alt="DineDistinct">
+                </div>
+                <div class="card-content">
+                    <h3>DineDistinct</h3>
+                    <p>
+                        Restaurant Discovery & Reservation Website designed to help users explore restaurants and reserve tables seamlessly.
+                    </p>
+                </div>
+            </a>
+
+            <!-- Project Card 2: Fruit Corner -->
+            <a href="fruit.html" class="card">
+                <div class="card-image">
+                    <img src="image/fruit-cover.png" alt="Fruit Corner">
+                </div>
+                <div class="card-content">
+                    <h3>Fruit Corner</h3>
+                    <p>Healthy Fruits Mobile App UI Design.</p>
+                </div>
+            </a>
+
+            <!-- Project Card 3: Restaurant App -->
+            <a href="restaurant.html" class="card">
+                <div class="card-image">
+                    <img src="image/app-cover.png" alt="Restaurant App">
+                </div>
+                <div class="card-content">
+                    <h3>Restaurant Mobile App UI Design</h3>
+                    <p>User-friendly restaurant app featuring Login, Sign Up, Home, Menu, and Order confirmation screens.</p>
+                </div>
+            </a>
+
+            <!-- Project Card 4: Food Promotion -->
+            <a href="food.html" class="card">
+                <div class="card-image">
+                    <img src="image/foods-cover.png" alt="Food Promotion">
+                </div>
+                <div class="card-content">
+                    <h3>Food Promotion</h3>
+                    <p>Animated Food Showcase Design with smooth transitions and modern promotional layouts.</p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 Himali Jinadra. All rights reserved.</p>
+    </footer>
+
+    <!-- Mobile Menu Toggle Script -->
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+
+        // Toggle menu on hamburger click
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+
+        // Close menu when a link is clicked
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                hamburger.classList.remove('active');
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.nav-container')) {
+                navMenu.classList.remove('active');
+                hamburger.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>

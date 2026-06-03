@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta Tags for Responsive Design -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Restaurant Mobile App UI Design - Himali Jinadra">
+    
+    <title>Restaurant App - Himali Jinadra</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="restaurant.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <!-- Logo -->
+            <a href="index.html" class="logo">Himali Jinadra</a>
+            
+            <!-- Hamburger Menu Button -->
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <!-- Navigation Links -->
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">Work</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Page Title -->
+        <h1 class="section-title">Restaurant Mobile App UI Design</h1>
+
+        <!-- Project Box -->
+        <div class="project-box">
+            <!-- Project Overview -->
+            <h2>Project Overview</h2>
+            <p>
+                A modern restaurant mobile application designed in Figma featuring Login, Sign Up, Home, Menu, Cart, and Order Confirmation screens. The design focuses on simplicity, usability, and an engaging food-ordering experience.
+            </p>
+
+            <!-- Role -->
+            <h2>Role</h2>
+            <p>UI/UX Designer</p>
+
+            <!-- Tools Used -->
+            <h2>Tools Used</h2>
+            <p>Figma</p>
+
+            <!-- Project Goal -->
+            <h2>Project Goal</h2>
+            <p>
+                To create a user-friendly restaurant app that enables users to browse food items, place orders, and manage their dining experience seamlessly.
+            </p>
+
+            <!-- App Screens -->
+            <h2>App Screens</h2>
+            <div class="gallery">
+                <img src="image/pic1.png" alt="Restaurant App Screen 1">
+                <img src="image/pic2.png" alt="Restaurant App Screen 2">
+                <img src="image/pic3.png" alt="Restaurant App Screen 3">
+                <img src="image/pic4.png" alt="Restaurant App Screen 4">
+                <img src="image/pic5.png" alt="Restaurant App Screen 5">
+                <img src="image/pic6.png" alt="Restaurant App Screen 6">
+                <img src="image/pic7.png" alt="Restaurant App Screen 7">
+                <img src="image/pic8.png" alt="Restaurant App Screen 8">
+            </div>
+
+            <!-- Prototype Video -->
+            <h2>Prototype Video</h2>
+            <div class="video-box">
+                <video controls>
+                    <source src="video/app.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <!-- Key Features -->
+            <h2>Key Features</h2>
+            <ul>
+                <li>Intuitive user authentication (Login & Sign Up)</li>
+                <li>Home screen with featured and trending items</li>
+                <li>Comprehensive menu browsing with categories</li>
+                <li>Shopping cart with easy item management</li>
+                <li>Secure checkout process</li>
+                <li>Order confirmation and tracking</li>
+                <li>User account and order history</li>
+                <li>Responsive design for various screen sizes</li>
+            </ul>
+
+            <!-- Outcome -->
+            <h2>Outcome</h2>
+            <p>
+                The final design delivers a smooth food ordering experience with intuitive navigation, clean visual hierarchy, and modern UI elements. Users can easily browse menus, customize orders, and complete transactions with minimal friction.
+            </p>
+
+            <!-- Design Highlights -->
+            <h2>Design Highlights</h2>
+            <ul>
+                <li>Clean and minimal interface design</li>
+                <li>Consistent color scheme and typography</li>
+                <li>High-quality food imagery</li>
+                <li>Smooth user flows and navigation</li>
+                <li>Clear call-to-action buttons</li>
+                <li>Touch-optimized interface elements</li>
+                <li>Modern and professional appearance</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 Himali Jinadra. All rights reserved.</p>
+    </footer>
+
+    <!-- Mobile Menu Toggle Script -->
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+
+        // Toggle menu on hamburger click
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+
+        // Close menu when a link is clicked
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                hamburger.classList.remove('active');
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.nav-container')) {
+                navMenu.classList.remove('active');
+                hamburger.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>

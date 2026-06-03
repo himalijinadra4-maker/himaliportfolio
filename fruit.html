@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta Tags for Responsive Design -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fruit Corner Mobile App Design - Himali Jinadra">
+    
+    <title>Fruit Corner - Himali Jinadra</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="fruit.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <!-- Logo -->
+            <a href="index.html" class="logo">Himali Jinadra</a>
+            
+            <!-- Hamburger Menu Button -->
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <!-- Navigation Links -->
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">Work</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Page Title -->
+        <h1 class="section-title">Fruit Corner Mobile App Design</h1>
+
+        <!-- Project Box -->
+        <div class="project-box">
+            <!-- Project Overview -->
+            <h2>Project Overview</h2>
+            <p>
+                Fruit Corner is a modern fruit shopping mobile application designed in Figma. The app allows users to browse fresh fruits, view product details, add items to cart, and place orders through a clean and user-friendly experience.
+            </p>
+
+            <!-- Role -->
+            <h2>Role</h2>
+            <p>UI/UX Designer</p>
+
+            <!-- Tools Used -->
+            <h2>Tools Used</h2>
+            <p>Figma</p>
+
+            <!-- Project Goal -->
+            <h2>Project Goal</h2>
+            <p>
+                To create an engaging and intuitive fruit shopping experience that helps users easily discover and purchase fresh fruits online.
+            </p>
+
+            <!-- Designs Section -->
+            <h2>App Designs</h2>
+            <div class="gallery">
+                <img src="image/home.jpg" alt="Fruit Corner Home Screen">
+                <img src="image/menu.png" alt="Fruit Corner Menu Screen">
+                <img src="image/profile.jpg" alt="Fruit Corner Profile Screen">
+                <img src="image/search.jpg" alt="Fruit Corner Search Screen">
+                <img src="image/shop.jpg" alt="Fruit Corner Shop Screen">
+                <img src="image/cart.jpg" alt="Fruit Corner Cart Screen">
+            </div>
+
+            <!-- Prototype Video -->
+            <h2>Prototype Video</h2>
+            <div class="video-box">
+                <video controls>
+                    <source src="video/fruit.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <!-- Key Features -->
+            <h2>Key Features</h2>
+            <ul>
+                <li>Clean and intuitive user interface</li>
+                <li>Easy product browsing and filtering</li>
+                <li>Detailed product information pages</li>
+                <li>Smooth shopping cart experience</li>
+                <li>User profile and order history</li>
+                <li>Responsive mobile design</li>
+                <li>Fast checkout process</li>
+            </ul>
+
+            <!-- Outcome -->
+            <h2>Outcome</h2>
+            <p>
+                The final design provides a simple, colorful, and user-friendly fruit shopping experience with smooth navigation and modern visual design. Users can easily browse products, compare options, and complete their purchase seamlessly.
+            </p>
+
+            <!-- Design Highlights -->
+            <h2>Design Highlights</h2>
+            <ul>
+                <li>Modern color palette with fresh, vibrant colors</li>
+                <li>Intuitive navigation structure</li>
+                <li>High-quality product imagery</li>
+                <li>Touch-friendly interface elements</li>
+                <li>Consistent typography and spacing</li>
+                <li>Clear call-to-action buttons</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 Himali Jinadra. All rights reserved.</p>
+    </footer>
+
+    <!-- Mobile Menu Toggle Script -->
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+
+        // Toggle menu on hamburger click
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+
+        // Close menu when a link is clicked
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                hamburger.classList.remove('active');
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.nav-container')) {
+                navMenu.classList.remove('active');
+                hamburger.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,424 @@
+/* ========================================
+   FOOD PROMOTION PROJECT PAGE - RESPONSIVE
+   ======================================== */
+
+/* Root Color Variables */
+:root {
+    --primary-color: #0b2f5b;
+    --secondary-color: #dbe7f0;
+    --text-color: #0b2f5b;
+    --text-light: #555;
+    --background-color: #f5f7fb;
+    --white: #ffffff;
+    --shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    --shadow-hover: 0 12px 25px rgba(0, 0, 0, 0.15);
+    --border-radius: 16px;
+    --transition: all 0.3s ease;
+}
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: var(--background-color);
+    color: var(--text-light);
+}
+
+/* ========================================
+   NAVIGATION BAR - RESPONSIVE
+   ======================================== */
+
+.navbar {
+    background: var(--secondary-color);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: var(--shadow);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--text-color);
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+/* Navigation Menu */
+.nav-menu {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.nav-link:hover {
+    color: #164a8a;
+}
+
+/* Hamburger Menu - Hidden on Desktop */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    background: none;
+    border: none;
+    gap: 6px;
+    padding: 0.5rem;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: var(--text-color);
+    border-radius: 3px;
+    transition: var(--transition);
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* ========================================
+   CONTAINER & SECTIONS
+   ======================================== */
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+
+/* ========================================
+   PROJECT BOX
+   ======================================== */
+
+.project-box {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.project-box h2 {
+    color: var(--text-color);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.project-box h3 {
+    color: var(--text-color);
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    font-size: 1.1rem;
+}
+
+.project-box p,
+.project-box li {
+    line-height: 1.8;
+    color: var(--text-light);
+    font-size: 1rem;
+}
+
+.project-box ul {
+    color: var(--text-light);
+    padding-left: 1.5rem;
+    margin: 1rem 0;
+}
+
+.project-box li {
+    margin-bottom: 0.5rem;
+}
+
+.project-box strong {
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+/* Gallery */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.gallery img {
+    width: 280px;
+    height: auto;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    object-fit: cover;
+}
+
+.gallery img:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-hover);
+}
+
+/* Video */
+.video-box {
+    margin: 2rem 0;
+}
+
+video {
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+/* ========================================
+   FOOTER
+   ======================================== */
+
+.footer {
+    background: var(--secondary-color);
+    padding: 2rem;
+    text-align: center;
+    color: var(--text-color);
+    font-weight: 500;
+    margin-top: 3rem;
+}
+
+/* ========================================
+   RESPONSIVE - TABLET (768px and below)
+   ======================================== */
+
+@media (max-width: 768px) {
+    /* Navigation */
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--secondary-color);
+        flex-direction: column;
+        gap: 0;
+        padding: 1rem;
+        border-top: 1px solid rgba(11, 47, 91, 0.1);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+
+    .nav-menu.active {
+        max-height: 300px;
+    }
+
+    .nav-link {
+        padding: 1rem;
+        border-bottom: 1px solid rgba(11, 47, 91, 0.05);
+        display: block;
+        width: 100%;
+    }
+
+    .nav-link:last-child {
+        border-bottom: none;
+    }
+
+    /* Section Title */
+    .section-title {
+        font-size: 2rem;
+    }
+
+    /* Container */
+    .container {
+        width: 95%;
+        padding: 1.5rem 0;
+    }
+
+    /* Project Box */
+    .project-box {
+        padding: 1.5rem;
+    }
+
+    .project-box h2 {
+        font-size: 1.25rem;
+        margin-top: 1.5rem;
+    }
+
+    .project-box h3 {
+        font-size: 1rem;
+    }
+
+    .project-box p {
+        font-size: 0.95rem;
+    }
+
+    /* Gallery */
+    .gallery {
+        gap: 1rem;
+    }
+
+    .gallery img {
+        width: 220px;
+    }
+
+    /* Video */
+    video {
+        border-radius: 12px;
+    }
+}
+
+/* ========================================
+   RESPONSIVE - MOBILE (480px and below)
+   ======================================== */
+
+@media (max-width: 480px) {
+    html {
+        font-size: 14px;
+    }
+
+    /* Navigation */
+    .navbar {
+        padding: 0.75rem 0;
+    }
+
+    .nav-container {
+        padding: 0 0.75rem;
+    }
+
+    .logo {
+        font-size: 1.1rem;
+    }
+
+    .nav-link {
+        font-size: 0.95rem;
+        padding: 0.75rem;
+    }
+
+    /* Section Title */
+    .section-title {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    /* Container */
+    .container {
+        width: 100%;
+        padding: 1rem 0;
+    }
+
+    /* Project Box */
+    .project-box {
+        padding: 1rem;
+        border-radius: 12px;
+    }
+
+    .project-box h2 {
+        font-size: 1.1rem;
+        margin-top: 1.25rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .project-box h3 {
+        font-size: 1rem;
+        margin-top: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .project-box p,
+    .project-box li {
+        font-size: 0.95rem;
+    }
+
+    .project-box ul {
+        padding-left: 1.25rem;
+    }
+
+    .project-box li {
+        margin-bottom: 0.4rem;
+    }
+
+    /* Gallery */
+    .gallery {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .gallery img {
+        width: 100%;
+        max-width: 280px;
+        height: auto;
+    }
+
+    /* Video */
+    video {
+        border-radius: 8px;
+        margin: 1rem 0;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    /* Prevent horizontal scroll */
+    body, html {
+        overflow-x: hidden;
+        max-width: 100vw;
+    }
+}
+
+    .video-box video{
+        width:250px;
+    }
+}
+video{
+    width:600px;
+    height:auto;
+    display:block;
+    margin:20px auto;
+    border-radius:15px;
+}

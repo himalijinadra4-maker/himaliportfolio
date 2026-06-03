@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta Tags for Responsive Design -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About Himali Jinadra - UI/UX Designer">
+    
+    <title>About - Himali Jinadra</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <!-- Logo -->
+            <a href="index.html" class="logo">Himali Jinadra</a>
+            
+            <!-- Hamburger Menu Button -->
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <!-- Navigation Links -->
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">Work</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Section -->
+    <section class="container">
+        <h1 class="section-title">About Me</h1>
+        
+        <!-- Profile Section -->
+        <div class="profile-section">
+            <img src="image/me.jpeg" alt="Himali Jinadra" class="profile-photo">
+            
+            <div class="profile-content">
+                <h2>Himali Jinadra</h2>
+                <p>
+                    UI/UX Designer focused on creating intuitive, user-friendly, and visually appealing digital experiences.
+                </p>
+            </div>
+        </div>
+
+        <!-- About Box -->
+        <div class="about-box">
+            <p>
+                Hi, I'm <strong>Himali Jinadra</strong>, a passionate UI/UX Designer focused on creating intuitive, user-friendly, and visually appealing digital experiences. I enjoy solving design problems by understanding user needs and transforming ideas into meaningful interfaces.
+            </p>
+
+            <p>
+                I have experience in designing responsive websites and mobile interfaces using Figma. My design approach combines user research, wireframing, prototyping, and visual design to create seamless experiences that are both functional and engaging.
+            </p>
+
+            <p>
+                I am always eager to learn new design trends, improve my skills, and create products that make users' lives easier.
+            </p>
+
+            <!-- Tools & Technologies Section -->
+            <h2>Tools & Technologies</h2>
+            <ul>
+                <li>Figma</li>
+                <li>Adobe XD</li>
+                <li>Canva</li>
+                <li>HTML & CSS</li>
+                <li>Bootstrap</li>
+            </ul>
+
+            <!-- Experience Section -->
+            <h2>Experience</h2>
+            <h3>UI/UX Design Intern</h3>
+            <p><strong>Infolabz IT Services Pvt. Ltd., Ahmedabad</strong></p>
+            <ul>
+                <li>Designed user-friendly web and mobile interfaces.</li>
+                <li>Created wireframes and interactive prototypes.</li>
+                <li>Collaborated with developers to ensure design consistency.</li>
+                <li>Applied user-centered design principles to improve usability.</li>
+            </ul>
+
+            <!-- Design Philosophy Section -->
+            <h2>My Design Philosophy</h2>
+            <blockquote>
+                "Good design is not only about aesthetics; it's about creating simple and meaningful experiences that solve real user problems."
+            </blockquote>
+
+            <!-- Connect Section -->
+            <h2>Connect With Me</h2>
+            <p>
+                📧 <a href="mailto:himalijinadra4@gmail.com">himalijinadra4@gmail.com</a>
+            </p>
+            <p>
+                🔗 <a href="https://www.linkedin.com/in/himali-jinadra-22081a331/" target="_blank" rel="noopener noreferrer">
+                    LinkedIn Profile
+                </a>
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 Himali Jinadra. All rights reserved.</p>
+    </footer>
+
+    <!-- Mobile Menu Toggle Script -->
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+
+        // Toggle menu on hamburger click
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+
+        // Close menu when a link is clicked
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                hamburger.classList.remove('active');
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.nav-container')) {
+                navMenu.classList.remove('active');
+                hamburger.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
+</html>
