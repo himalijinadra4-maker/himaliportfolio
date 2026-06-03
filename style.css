@@ -185,7 +185,9 @@ body {
     box-shadow: var(--shadow-hover);
     transform: translateY(-3px);
 }
-
+#email{
+    color:#dbe7f0;
+}
 .btn-secondary {
     background: var(--white);
     color: var(--primary-color);
