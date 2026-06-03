@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Responsive Portfolio Website - Himali Jinadra
 
 ## Overview
@@ -392,3 +393,7 @@ Your portfolio is now fully responsive and ready for deployment! It provides an 
 **Version**: 2.0 (Responsive)
 **Last Updated**: 2026
 **Created for**: Himali Jinadra Portfolio
+=======
+# himaliportfolio
+Hi, I’m Himali  UI/UX Designer focused on creating clean, user-friendly, and modern digital experiences.
+>>>>>>> 4b00f1a7b4ff637bcd2609ddbbdbbca7a0d12275
