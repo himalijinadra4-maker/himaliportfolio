@@ -263,6 +263,12 @@ video {
         display: flex;
     }
 
+    /* Remove divider line / shadow under navbar on small screens */
+    .navbar {
+        box-shadow: none;
+        border-bottom: none;
+    }
+
     .nav-menu {
         position: absolute;
         top: 100%;
@@ -272,7 +278,7 @@ video {
         flex-direction: column;
         gap: 0;
         padding: 1rem;
-        border-top: 1px solid rgba(11, 47, 91, 0.1);
+        border-top: none;
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.3s ease;
@@ -284,7 +290,7 @@ video {
 
     .nav-link {
         padding: 1rem;
-        border-bottom: 1px solid rgba(11, 47, 91, 0.05);
+        border-bottom: none;
         display: block;
         width: 100%;
     }

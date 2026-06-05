@@ -260,7 +260,7 @@ video {
         flex-direction: column;
         gap: 0;
         padding: 1rem;
-        border-top: 1px solid rgba(11, 47, 91, 0.1);
+        border-top: none;
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.3s ease;
@@ -272,7 +272,7 @@ video {
 
     .nav-link {
         padding: 1rem;
-        border-bottom: 1px solid rgba(11, 47, 91, 0.05);
+        border-bottom: none;
         display: block;
         width: 100%;
     }
@@ -286,6 +286,11 @@ video {
         font-size: 2rem;
     }
 
+    /* Remove divider line / shadow under navbar on small screens */
+    .navbar {
+        box-shadow: none;
+        border-bottom: none;
+
     /* Container */
     .container {
         width: 95%;
@@ -296,7 +301,7 @@ video {
     /* Project Box */
     .project-box {
         padding: 1.5rem;
-    }
+        border-top: none;
 
     .project-box h2 {
         font-size: 1.25rem;
@@ -308,7 +313,7 @@ video {
     }
 
     .project-box p {
-        font-size: 0.95rem;
+        border-bottom: none;
     }
 
     /* Gallery */
