@@ -14,6 +14,7 @@ body {
     font-family: 'Poppins', sans-serif;
     background: #f5f7fb;
     color: #333;
+    scroll-padding-top: 70px;
 }
 
 /* ========================================
@@ -56,6 +57,19 @@ nav a:hover {
     padding: 2rem 0;
 }
 
+/* Ensure proper top spacing on mobile to prevent navbar overlap */
+@media (max-width: 768px) {
+    .container {
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        margin-top: 0.5rem;
+    }
+}
+
 /* ========================================
    SECTION TITLE
    ======================================== */
@@ -66,6 +80,7 @@ nav a:hover {
     font-size: 2.5rem;
     margin-bottom: 2rem;
     font-weight: 700;
+    scroll-margin-top: 70px;
 }
 
 /* ========================================
@@ -286,6 +301,7 @@ video {
     .container {
         width: 95%;
         padding: 1.5rem 0;
+        margin-top: 1rem;
     }
 
     /* Content Box */
@@ -352,6 +368,7 @@ video {
     .container {
         width: 100%;
         padding: 1rem 0;
+        margin-top: 0.5rem;
     }
 
     /* Content Box */
